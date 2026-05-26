@@ -1,0 +1,163 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: IaC for Athena environment (S3 Bucket, WorkGroup, Glue Database, Glue Crawler)
+
+Parameters:
+  Alias:
+    Type: String
+    Description: Short alias used to name resources (e.g., uw-abc123)
+    AllowedPattern: '^[a-z0-9]+$'
+    ConstraintDescription: "Use lowercase letters and digits only (no hyphens); required for Glue database naming"
+  DataPrefix:
+    Type: String
+    Default: IaC_Athena/parquet_results/
+    Description: Prefix in the bucket for Parquet data copied from shared bucket
+  AthenaResultsPrefix:
+    Type: String
+    Default: athena_results/
+    Description: Prefix in the bucket for Athena query results
+  GlueRoleName:
+    Type: String
+    Default: LabRole
+    Description: Pre-existing IAM role name to run the Glue crawler (use LabRole; do not create new roles)
+
+Resources:
+  StudentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub Iac_Athena_Testing
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: !Sub de_${Alias}_db
+
+  AthenaWorkGroup:
+    Type: AWS::Athena::WorkGroup
+    Properties:
+      Name: !Sub de-${Alias}-wg
+      State: ENABLED
+      WorkGroupConfiguration:
+        EnforceWorkGroupConfiguration: false
+        PublishCloudWatchMetricsEnabled: true
+        ResultConfiguration:
+          OutputLocation: !Sub s3://${StudentBucket}/${AthenaResultsPrefix}
+
+  GlueCrawler:
+    Type: AWS::Glue::Crawler
+    Properties:
+      Name: !Sub de-${Alias}-crawler
+      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/${GlueRoleName}
+      DatabaseName: !Ref GlueDatabase
+      Targets:
+        S3Targets:
+          - Path: !Sub s3://${StudentBucket}/${DataPrefix}
+      SchemaChangePolicy:
+        DeleteBehavior: DEPRECATE_IN_DATABASE
+        UpdateBehavior: UPDATE_IN_DATABASE
+    
+  OrdersManualTable:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueDatabase
+      TableInput:
+        Name: orders_manual
+        Description: Manually defined table for orders data (Parquet format)
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          EXTERNAL: 'TRUE'
+          'classification': 'parquet'
+          'typeOfData': 'file'
+        PartitionKeys:
+          - Name: year
+            Type: string
+          - Name: month
+            Type: string
+        StorageDescriptor:
+          Columns:
+            - Name: id
+              Type: bigint
+            - Name: customer_id
+              Type: bigint
+            - Name: ts
+              Type: string
+            - Name: region
+              Type: string
+            - Name: category
+              Type: string
+            - Name: status
+              Type: string
+            - Name: quantity
+              Type: int
+            - Name: unit_price
+              Type: double
+            - Name: discount_rate
+              Type: double
+            - Name: extended_price
+              Type: double
+            - Name: optional_score
+              Type: double
+            - Name: blob_a
+              Type: string
+            - Name: blob_b
+              Type: string
+            - Name: blob_c
+              Type: string
+          Location: "s3://<source_bucket_location>/parquet/"
+          InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
+          Compressed: false
+          SerdeInfo:
+            SerializationLibrary: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
+            Parameters:
+              'serialization.format': '1'
+
+Outputs:
+  BucketName:
+    Description: Name of the S3 bucket created for this lab
+    Value: !Ref StudentBucket
+    Export:
+      Name: !Sub de-${Alias}-BucketName
+  GlueDatabaseName:
+    Description: Name of the Glue Database created
+    Value: !Ref GlueDatabase
+    Export:
+      Name: !Sub de-${Alias}-GlueDatabaseName
+  AthenaWorkGroupName:
+    Description: Name of the Athena WorkGroup created
+    Value: !Ref AthenaWorkGroup
+    Export:
+      Name: !Sub de-${Alias}-AthenaWorkGroupName
+  GlueCrawlerName:
+    Description: Name of the Glue Crawler created
+    Value: !Ref GlueCrawler
+    Export:
+      Name: !Sub de-${Alias}-GlueCrawlerName
+  QueryResultsLocation:
+    Description: S3 location for Athena query results
+    Value: !Sub s3://${StudentBucket}/${AthenaResultsPrefix}
+    Export:
+      Name: !Sub de-${Alias}-QueryResultsLocation
+  DataPath:
+    Description: S3 path scanned by the Glue Crawler
+    Value: !Sub s3://${StudentBucket}/${DataPrefix}
+    Export:
+      Name: !Sub de-${Alias}-DataPath
+  ManualTableName:
+    Description: Name of the manual Glue Table
+    Value: orders_manual
+    Export:
+      Name: !Sub de-${Alias}-ManualTableName
+

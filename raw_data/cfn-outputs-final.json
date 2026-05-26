@@ -1,0 +1,83 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:738414836223:stack/week-06-homework-516/fb13c7d0-c73f-11f0-9ffe-0a8d2a84e44f",
+            "StackName": "week-06-homework-516",
+            "ChangeSetId": "arn:aws:cloudformation:us-west-2:738414836223:changeSet/awscli-cloudformation-package-deploy-1763773805/fd170a80-83e3-4e9b-ae92-48636090837f",
+            "Description": "Week 6 - IaC for Athena environment (S3 Bucket, WorkGroup, Glue Database, Glue Crawler)",
+            "Parameters": [
+                {
+                    "ParameterKey": "AthenaResultsPrefix",
+                    "ParameterValue": "athena_results/"
+                },
+                {
+                    "ParameterKey": "DataPrefix",
+                    "ParameterValue": "class06/parquet_results/"
+                },
+                {
+                    "ParameterKey": "GlueRoleName",
+                    "ParameterValue": "LabRole"
+                },
+                {
+                    "ParameterKey": "Alias",
+                    "ParameterValue": "srimantweek06"
+                }
+            ],
+            "CreationTime": "2025-11-22T01:10:05.837000+00:00",
+            "LastUpdatedTime": "2025-11-22T01:10:11.168000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Outputs": [
+                {
+                    "OutputKey": "ManualTableName",
+                    "OutputValue": "orders_manual",
+                    "Description": "Name of the manual Glue Table",
+                    "ExportName": "de-srimantweek06-ManualTableName"
+                },
+                {
+                    "OutputKey": "BucketName",
+                    "OutputValue": "uw-srimantweek06-wk06",
+                    "Description": "Name of the S3 bucket created for this lab",
+                    "ExportName": "de-srimantweek06-BucketName"
+                },
+                {
+                    "OutputKey": "DataPath",
+                    "OutputValue": "s3://uw-srimantweek06-wk06/class06/parquet_results/",
+                    "Description": "S3 path scanned by the Glue Crawler",
+                    "ExportName": "de-srimantweek06-DataPath"
+                },
+                {
+                    "OutputKey": "GlueCrawlerName",
+                    "OutputValue": "de-srimantweek06-crawler",
+                    "Description": "Name of the Glue Crawler created",
+                    "ExportName": "de-srimantweek06-GlueCrawlerName"
+                },
+                {
+                    "OutputKey": "GlueDatabaseName",
+                    "OutputValue": "de_srimantweek06_db",
+                    "Description": "Name of the Glue Database created",
+                    "ExportName": "de-srimantweek06-GlueDatabaseName"
+                },
+                {
+                    "OutputKey": "AthenaWorkGroupName",
+                    "OutputValue": "de-srimantweek06-wg",
+                    "Description": "Name of the Athena WorkGroup created",
+                    "ExportName": "de-srimantweek06-AthenaWorkGroupName"
+                },
+                {
+                    "OutputKey": "QueryResultsLocation",
+                    "OutputValue": "s3://uw-srimantweek06-wk06/athena_results/",
+                    "Description": "S3 location for Athena query results",
+                    "ExportName": "de-srimantweek06-QueryResultsLocation"
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

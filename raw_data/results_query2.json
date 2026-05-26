@@ -1,0 +1,850 @@
+{
+    "ResultSet": {
+        "Rows": [
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "region"
+                    },
+                    {
+                        "VarCharValue": "status"
+                    },
+                    {
+                        "VarCharValue": "order_count"
+                    },
+                    {
+                        "VarCharValue": "total_revenue"
+                    },
+                    {
+                        "VarCharValue": "avg_order_value"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-west"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "3414"
+                    },
+                    {
+                        "VarCharValue": "6059736.26"
+                    },
+                    {
+                        "VarCharValue": "1774.97"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-east"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "3177"
+                    },
+                    {
+                        "VarCharValue": "5912335.35"
+                    },
+                    {
+                        "VarCharValue": "1860.98"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-west"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "2523"
+                    },
+                    {
+                        "VarCharValue": "4284738.5"
+                    },
+                    {
+                        "VarCharValue": "1698.27"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-central"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "1670"
+                    },
+                    {
+                        "VarCharValue": "2994331.69"
+                    },
+                    {
+                        "VarCharValue": "1793.01"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-northeast"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "1459"
+                    },
+                    {
+                        "VarCharValue": "2594157.9"
+                    },
+                    {
+                        "VarCharValue": "1778.04"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-south"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "1121"
+                    },
+                    {
+                        "VarCharValue": "1951716.9"
+                    },
+                    {
+                        "VarCharValue": "1741.05"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-west"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "736"
+                    },
+                    {
+                        "VarCharValue": "1237303.37"
+                    },
+                    {
+                        "VarCharValue": "1681.12"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-east"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "661"
+                    },
+                    {
+                        "VarCharValue": "1199970.73"
+                    },
+                    {
+                        "VarCharValue": "1815.39"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-west"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "585"
+                    },
+                    {
+                        "VarCharValue": "1138971.9"
+                    },
+                    {
+                        "VarCharValue": "1946.96"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "sa-east"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "535"
+                    },
+                    {
+                        "VarCharValue": "942664.25"
+                    },
+                    {
+                        "VarCharValue": "1761.99"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-west"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "521"
+                    },
+                    {
+                        "VarCharValue": "935109.44"
+                    },
+                    {
+                        "VarCharValue": "1794.84"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-east"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "502"
+                    },
+                    {
+                        "VarCharValue": "914858.43"
+                    },
+                    {
+                        "VarCharValue": "1822.43"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-west"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "469"
+                    },
+                    {
+                        "VarCharValue": "852019.17"
+                    },
+                    {
+                        "VarCharValue": "1816.67"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-west"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "458"
+                    },
+                    {
+                        "VarCharValue": "842424.86"
+                    },
+                    {
+                        "VarCharValue": "1839.36"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ca-central"
+                    },
+                    {
+                        "VarCharValue": "DELIVERED"
+                    },
+                    {
+                        "VarCharValue": "463"
+                    },
+                    {
+                        "VarCharValue": "786917.93"
+                    },
+                    {
+                        "VarCharValue": "1699.61"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-central"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "382"
+                    },
+                    {
+                        "VarCharValue": "681334.64"
+                    },
+                    {
+                        "VarCharValue": "1783.6"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-east"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "395"
+                    },
+                    {
+                        "VarCharValue": "676286.35"
+                    },
+                    {
+                        "VarCharValue": "1712.12"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-northeast"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "330"
+                    },
+                    {
+                        "VarCharValue": "615060.3"
+                    },
+                    {
+                        "VarCharValue": "1863.82"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-west"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "330"
+                    },
+                    {
+                        "VarCharValue": "597502.43"
+                    },
+                    {
+                        "VarCharValue": "1810.61"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-west"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "322"
+                    },
+                    {
+                        "VarCharValue": "590951.4"
+                    },
+                    {
+                        "VarCharValue": "1835.25"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "us-east"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "309"
+                    },
+                    {
+                        "VarCharValue": "555845.85"
+                    },
+                    {
+                        "VarCharValue": "1798.85"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-west"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "259"
+                    },
+                    {
+                        "VarCharValue": "526822.05"
+                    },
+                    {
+                        "VarCharValue": "2034.06"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-south"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "270"
+                    },
+                    {
+                        "VarCharValue": "499665.14"
+                    },
+                    {
+                        "VarCharValue": "1850.61"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-central"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "268"
+                    },
+                    {
+                        "VarCharValue": "445254.93"
+                    },
+                    {
+                        "VarCharValue": "1661.4"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-central"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "236"
+                    },
+                    {
+                        "VarCharValue": "395512.92"
+                    },
+                    {
+                        "VarCharValue": "1675.9"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-northeast"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "224"
+                    },
+                    {
+                        "VarCharValue": "378091.86"
+                    },
+                    {
+                        "VarCharValue": "1687.91"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-south"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "190"
+                    },
+                    {
+                        "VarCharValue": "371812.29"
+                    },
+                    {
+                        "VarCharValue": "1956.91"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-northeast"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "189"
+                    },
+                    {
+                        "VarCharValue": "327890.53"
+                    },
+                    {
+                        "VarCharValue": "1734.87"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "eu-central"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "152"
+                    },
+                    {
+                        "VarCharValue": "278598.48"
+                    },
+                    {
+                        "VarCharValue": "1832.88"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-northeast"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "135"
+                    },
+                    {
+                        "VarCharValue": "261668.87"
+                    },
+                    {
+                        "VarCharValue": "1938.29"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-south"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "142"
+                    },
+                    {
+                        "VarCharValue": "248852.68"
+                    },
+                    {
+                        "VarCharValue": "1752.48"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ap-south"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "117"
+                    },
+                    {
+                        "VarCharValue": "191663.76"
+                    },
+                    {
+                        "VarCharValue": "1638.15"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ca-central"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "93"
+                    },
+                    {
+                        "VarCharValue": "168920.69"
+                    },
+                    {
+                        "VarCharValue": "1816.35"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "sa-east"
+                    },
+                    {
+                        "VarCharValue": "SHIPPED"
+                    },
+                    {
+                        "VarCharValue": "108"
+                    },
+                    {
+                        "VarCharValue": "139753.77"
+                    },
+                    {
+                        "VarCharValue": "1294.02"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "sa-east"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "80"
+                    },
+                    {
+                        "VarCharValue": "133077.35"
+                    },
+                    {
+                        "VarCharValue": "1663.47"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "sa-east"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "65"
+                    },
+                    {
+                        "VarCharValue": "123208.33"
+                    },
+                    {
+                        "VarCharValue": "1895.51"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ca-central"
+                    },
+                    {
+                        "VarCharValue": "PENDING"
+                    },
+                    {
+                        "VarCharValue": "65"
+                    },
+                    {
+                        "VarCharValue": "107544.89"
+                    },
+                    {
+                        "VarCharValue": "1654.54"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ca-central"
+                    },
+                    {
+                        "VarCharValue": "CANCELLED"
+                    },
+                    {
+                        "VarCharValue": "48"
+                    },
+                    {
+                        "VarCharValue": "94306.64"
+                    },
+                    {
+                        "VarCharValue": "1964.72"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "sa-east"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "52"
+                    },
+                    {
+                        "VarCharValue": "87372.83"
+                    },
+                    {
+                        "VarCharValue": "1680.25"
+                    }
+                ]
+            },
+            {
+                "Data": [
+                    {
+                        "VarCharValue": "ca-central"
+                    },
+                    {
+                        "VarCharValue": "RETURNED"
+                    },
+                    {
+                        "VarCharValue": "41"
+                    },
+                    {
+                        "VarCharValue": "51210.61"
+                    },
+                    {
+                        "VarCharValue": "1249.04"
+                    }
+                ]
+            }
+        ],
+        "ResultSetMetadata": {
+            "ColumnInfo": [
+                {
+                    "CatalogName": "hive",
+                    "SchemaName": "",
+                    "TableName": "",
+                    "Name": "region",
+                    "Label": "region",
+                    "Type": "varchar",
+                    "Precision": 2147483647,
+                    "Scale": 0,
+                    "Nullable": "UNKNOWN",
+                    "CaseSensitive": true
+                },
+                {
+                    "CatalogName": "hive",
+                    "SchemaName": "",
+                    "TableName": "",
+                    "Name": "status",
+                    "Label": "status",
+                    "Type": "varchar",
+                    "Precision": 2147483647,
+                    "Scale": 0,
+                    "Nullable": "UNKNOWN",
+                    "CaseSensitive": true
+                },
+                {
+                    "CatalogName": "hive",
+                    "SchemaName": "",
+                    "TableName": "",
+                    "Name": "order_count",
+                    "Label": "order_count",
+                    "Type": "bigint",
+                    "Precision": 19,
+                    "Scale": 0,
+                    "Nullable": "UNKNOWN",
+                    "CaseSensitive": false
+                },
+                {
+                    "CatalogName": "hive",
+                    "SchemaName": "",
+                    "TableName": "",
+                    "Name": "total_revenue",
+                    "Label": "total_revenue",
+                    "Type": "double",
+                    "Precision": 17,
+                    "Scale": 0,
+                    "Nullable": "UNKNOWN",
+                    "CaseSensitive": false
+                },
+                {
+                    "CatalogName": "hive",
+                    "SchemaName": "",
+                    "TableName": "",
+                    "Name": "avg_order_value",
+                    "Label": "avg_order_value",
+                    "Type": "double",
+                    "Precision": 17,
+                    "Scale": 0,
+                    "Nullable": "UNKNOWN",
+                    "CaseSensitive": false
+                }
+            ]
+        }
+    },
+    "UpdateCount": 0
+}
