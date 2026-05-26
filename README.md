@@ -75,15 +75,17 @@ aws cloudformation deploy \
 Copy the sample partitioned Parquet dataset from the source bucket into your newly provisioned S3 bucket (substitute your S3 bucket name from the CloudFormation outputs):
 
 ```bash
-aws s3 cp s3://csed516-shared-resources-au2025-sharedclassbucket-mc0zal7gjcmu/class06/parquet/ \
-  s3://<your-s3-bucket-name>/class06/parquet_results/ \
+aws s3 cp s3://<source=bucket-name> \
+  s3://<your-s3-bucket-name>/ \
   --recursive \
   --region us-west-2
 ```
 
+This instruction leads to a large dataset getting loaded into our S3 bucket, on which the following data processing tests are carried out
+
 ### 3. Schema Cataloging Options
 
-We implement and contrast two data cataloging methodologies:
+This project implements and contrast two data cataloging methodologies:
 
 *   **Option A: Auto-Discovery (Glue Crawler)**
     Start the Glue Crawler to automatically scan S3 files, detect columns, create a database table, and partition the data by folders (`year` and `month`):
@@ -144,12 +146,7 @@ Make sure [uv](https://github.com/astral-sh/uv) (or standard Python 3.10+) is in
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Run CSV Conversion Tool:**
-    This script extracts the query results from the raw AWS CLI JSON output files:
-    ```bash
-    python scripts/convert_json_to_csv.py
-    ```
-5.  **Open the Jupyter Notebook:**
+4.  **Open the Jupyter Notebook:**
     Launch Jupyter Lab/Notebook to view the analysis:
     ```bash
     jupyter notebook notebooks/athena_performance_analysis.ipynb
